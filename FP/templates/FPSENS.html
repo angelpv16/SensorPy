@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> {{name}} ICT Sensor</title>
+</head>
+<body>
+
+
+<h1> {{name}} ICT Sensor</h1>
+<a href="http://127.0.0.1:5000/1">Go to pressure</a>
+<a href="http://127.0.0.1:5000/2">Go to humidity</a>
+<a href="http://127.0.0.1:5000/3">Go to Temp_Pressure</a>
+<a href="http://127.0.0.1:5000/4">Go to Temp_Humidity</a>
+<a href="http://127.0.0.1:5000/5">Go to North</a>
+<a href="http://127.0.0.1:5000/6">Go to Raw</a>
+<a href="http://127.0.0.1:5000/7">Go to Gyro</a>
+<a href="http://127.0.0.1:5000/8">Go to Accel</a>
+<a href="http://127.0.0.1:5000/9">Go to Ori_deg</a>
+
+<div id="current_date"></p>
+<p>This is the practice 6 where we will see the basic knowledge about html</p>
+
+   
+<table>
+  <tr>
+    <th>name</th>
+    <th>description</th>
+    <th>value</th>
+    <th>date</th>
+  </tr>
+  {% for n,d,v,d in data %}
+      <tr>
+        <td>{{n}}</td>
+        <td>{{d}}</td>
+        <td>{{v}}</td>
+        <td>{{v}}</td>
+      </tr>
+  {% endfor %}
+</table>
+
+<footer>
+    <script>
+        document.getElementById("current_date").innerHTML = Date();
+        </script>
+    </footer>
+</body>
+
+</html>
